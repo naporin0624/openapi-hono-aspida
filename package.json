@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "prebuild:api": "rimraf src/config/api",
+    "build:api": "openapi2aspida -c aspida.config.cjs"
+  },
+  "dependencies": {
+    "@aspida/fetch": "^1.14.0",
+    "@hono/zod-openapi": "^0.8.0",
+    "hono": "^3.8.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230914.0",
+    "openapi2aspida": "^0.23.2",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2",
+    "wrangler": "^3.14.0"
+  }
+}

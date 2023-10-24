@@ -1,0 +1,6 @@
+name = "openapi-hono"
+compatibility_date = "2023-01-01"
+
+services = [
+  { binding = "SELF_SERVICE", service = "openapi-hono", environment = "production" }
+]
